@@ -93,7 +93,7 @@ export default class HashTable {
   }
 
   /**
-   * 获取hash表中已存在的所以的key
+   * 获取hash表中已存在的所有的key
    * @return {string[]}
    */
   getKeys() {
