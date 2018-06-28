@@ -1,5 +1,5 @@
 import LinkedListNode from './LinkedListNode'
-import Comparator from '../../utils/comparator/Comparator'
+import Comparator from '../../utils/Comparator'
 
 export default class LinkedList {
   /**
@@ -32,7 +32,7 @@ export default class LinkedList {
    *@return {LinkedList}
    */
   append(value) {
-    const newNodw = new LinkedListNode(value)
+    const newNode = new LinkedListNode(value)
 
     //如果没有头部节点，让刚才创建的新节点作为头部节点
     if (!this.head) {

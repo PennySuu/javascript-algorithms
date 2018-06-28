@@ -1,0 +1,27 @@
+{
+  "name": "javascript-algorithms",
+  "version": "1.0.0",
+  "description": "Algorithms and data-structures implemented on JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PennySuu/javascript-algorithms.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Data strcutures"
+  ],
+  "author": "PennySuu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PennySuu/javascript-algorithms/issues"
+  },
+  "homepage": "https://github.com/PennySuu/javascript-algorithms#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.2.0"
+  }
+}
