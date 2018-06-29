@@ -6,12 +6,12 @@
 
 在[Javascript 数据结构](https://huangxsu.com/2018/06/22/data-structure/)这篇文章中对每种算法进行了介绍。
 
-- [x] [链表](/tree/master/src/data-structures/linked-list)
-- [x] [队列](/blob/master/src/data-structures/queue/Queue.js)
-- [x] [栈](/blob/master/src/data-structures/stack/Stack.js)
-- [x] [哈希表](/blob/master/src/data-structures/hash-table/HashTable.js)
-- [x] [堆](/blob/master/src/data-structures/stack/Stack.js)
-- [x] [优先队列](/blob/master/src/data-structures/priority-queue/PriorityQueue.js)
+- [x] [链表](/src/data-structures/linked-list)
+- [x] [队列](/src/data-structures/queue/Queue.js)
+- [x] [栈](/src/data-structures/stack/Stack.js)
+- [x] [哈希表](/src/data-structures/hash-table/HashTable.js)
+- [x] [堆](/src/data-structures/stack/Stack.js)
+- [x] [优先队列](/src/data-structures/priority-queue/PriorityQueue.js)
 - [ ] 字典树
 - [ ] 树
   - [ ] 二分查找
