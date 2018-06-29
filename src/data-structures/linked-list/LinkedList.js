@@ -27,7 +27,7 @@ export default class LinkedList {
     return this
   }
   /**
-   *@description 在尾部插入一个节点
+   *在尾部插入一个节点
    *@param {*} value
    *@return {LinkedList}
    */
@@ -49,7 +49,7 @@ export default class LinkedList {
     return this
   }
   /**
-   *@description 删除某个节点
+   *删除某个节点
    *@param {*} value
    *@return {LinkedListNode}
    */
@@ -60,7 +60,7 @@ export default class LinkedList {
     let deleteNode = null
 
     //如果删除的是头部节点，那么使下一个节点作为头部节点
-    while (this.head && this.compare.equal(this.head, value)) {
+    while (this.head && this.compare.equal(this.head.value, value)) {
       deleteNode = this.head
       this.head = this.head.next
     }
@@ -85,13 +85,13 @@ export default class LinkedList {
     return deleteNode
   }
   /**
-   *@description 查找节点
+   * 查找节点
    * @param {Object} findParams
    * @param {*} findParams.value
    * @param {function} [findParams.callback]
    * @return {LinkedListNode}
    */
-  find(value = undefined, callback = undefined) {
+  find({ value = undefined, callback = undefined }) {
     if (!this.head) {
       return null
     }
@@ -110,7 +110,7 @@ export default class LinkedList {
     return null
   }
   /**
-   *@description 删除尾部节点
+   * 删除尾部节点
    * @return {LinkedListNode}
    */
   deleteTail() {
@@ -135,7 +135,7 @@ export default class LinkedList {
     return deletedTail
   }
   /**
-   *@description 删除头部节点
+   * 删除头部节点
    * @return {LinkedListNode}
    */
   deleteHead() {
@@ -155,7 +155,7 @@ export default class LinkedList {
     return deletedHead
   }
   /**
-   *@description 转换为数组
+   * 转换为数组
    * @return {LinkedListNode[]}
    */
   toArray() {

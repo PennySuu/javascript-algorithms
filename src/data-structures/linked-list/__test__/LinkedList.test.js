@@ -121,7 +121,7 @@ describe('LinkedList', () => {
     const nodeValue1 = { value: 1, key: 'key1' }
     const nodeValue2 = { value: 2, key: 'key2' }
 
-    linkedList.append(nodeValue1).append(nodeValue2)
+    linkedList.append(nodeValue1).prepend(nodeValue2)
 
     const nodeStringifier = value => `${value.key}:${value.value}`
 
@@ -151,7 +151,7 @@ describe('LinkedList', () => {
     const node = linkedList.find({ callback: value => value.key === 'test2' })
     expect(node).toBeDefined()
     expect(node.value.value).toBe(2)
-    expect(nodel.value.key).toBe('test2')
+    expect(node.value.key).toBe('test2')
     expect(
       linkedList.find({ callback: value => value.key === 'test5' })
     ).toBeNull()

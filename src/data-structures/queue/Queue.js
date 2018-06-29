@@ -30,4 +30,7 @@ export default class Queue {
     const removedHead = this.linkedList.deleteHead()
     return removedHead ? removedHead.value : null
   }
+  toString(callback) {
+    return this.linkedList.toString(callback)
+  }
 }

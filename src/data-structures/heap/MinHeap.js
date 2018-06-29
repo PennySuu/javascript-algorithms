@@ -79,7 +79,7 @@ export default class MinHeap {
    * @return {*}
    */
   parent(childIndex) {
-    return this.heapContainer(this.getParentIndex(childIndex))
+    return this.heapContainer[this.getParentIndex(childIndex)]
   }
   /**
    * 交换两个节点
