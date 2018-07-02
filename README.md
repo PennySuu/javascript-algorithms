@@ -12,7 +12,7 @@
 - [x] [哈希表](/src/data-structures/hash-table/HashTable.js)
 - [x] [堆](/src/data-structures/stack/Stack.js)
 - [x] [优先队列](/src/data-structures/priority-queue/PriorityQueue.js)
-- [ ] 字典树
+- [x] [字典树](/src/data-structures/trie)
 - [ ] 树
   - [ ] 二分查找
   - [ ] AVL 树
