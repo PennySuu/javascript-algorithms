@@ -3,7 +3,7 @@ import LinkedList from '../linked-list/LinkedList'
 // 哈希表的大小直接影响冲突的个数
 // 哈希表越大冲突数越少
 // 为了演示冲突是何如处理的，可以把哈希表的大小设置成一个很小的值
-const defaultHashTableSize = 32
+const defaultHashTableSize = 31
 
 export default class HashTable {
   /**
