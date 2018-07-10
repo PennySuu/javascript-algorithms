@@ -77,6 +77,7 @@ export default class BinarySearchNode extends BinaryTreeNode {
         BinaryTreeNode.copyNode(childNode, nodeToRemove)
       }
     }
+    return true
   }
   finMin() {
     if (!this.left) {
