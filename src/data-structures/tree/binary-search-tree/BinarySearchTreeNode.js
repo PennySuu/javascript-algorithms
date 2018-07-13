@@ -25,7 +25,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
     // 插入的节点比本节点小，应插入到左边
     if (this.nodeValueComparator.lessThan(value, this.value)) {
       if (this.left) {
-        return this.left.inset(value)
+        return this.left.insert(value)
       }
       const newNode = new BinarySearchTreeNode(value, this.compareFunction)
       this.setLeft(newNode)
@@ -96,7 +96,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
     } else if (nodeToRemove.left && nodeToRemove.right) {
       // 要移除的节点有孩子节点且有两个
       // 从要移除的节点的右孩子节点树（较大节点）中找出最小的那个节点，用来替换将要移除的节点
-      const nextBiggerNode = nodeToRemove.right.finMin()
+      const nextBiggerNode = nodeToRemove.right.findMin()
 
       // 如果刚才找到的节点不等于要移除节点的右孩子节点
       if (!this.nodeComparator.equal(nextBiggerNode, nodeToRemove.right)) {
@@ -128,10 +128,10 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
    * 查找最小的节点
    * @return {BinarySearchTreeNode}
    */
-  finMin() {
+  findMin() {
     if (!this.left) {
       return this
     }
-    return this.left.finMin()
+    return this.left.findMin()
   }
 }

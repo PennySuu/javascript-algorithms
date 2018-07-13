@@ -107,7 +107,7 @@ export default class BinaryTreeNode {
    */
   setRight(node) {
     if (this.right) {
-      this.left.parent = null
+      this.right.parent = null
     }
     this.right = node
     if (node) {
