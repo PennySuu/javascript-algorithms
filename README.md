@@ -14,7 +14,7 @@
 - [x] [优先队列](/src/data-structures/priority-queue/PriorityQueue.js)
 - [x] [字典树](/src/data-structures/trie)
 - [x] [树](/src/data-structures/tree/BinaryTreeNode.js)
-  - [x] [二分查找](/src/data-structures/tree/binary-search-tree)
+  - [x] [二叉查找树](/src/data-structures/tree/binary-search-tree)
   - [ ] AVL 树
   - [ ] 红黑树
 - [ ] 图（有向图和无向图）
