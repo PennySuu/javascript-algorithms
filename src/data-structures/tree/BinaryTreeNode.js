@@ -46,10 +46,11 @@ export default class BinaryTreeNode {
     return Math.max(this.leftHeight, this.rightHeight)
   }
   /**
+   * 平衡因子
    * @return {number}
    */
   get balanceFactor() {
-    return (this.leftHeight === this.rightHeight)
+    return this.leftHeight - this.rightHeight
   }
   /**
    * 获取父节点的兄弟节点

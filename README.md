@@ -15,7 +15,7 @@
 - [x] [字典树](/src/data-structures/trie)
 - [x] [树](/src/data-structures/tree/BinaryTreeNode.js)
   - [x] [二叉查找树](/src/data-structures/tree/binary-search-tree)
-  - [ ] AVL 树
+  - [x] [AVL 树](/src/data-structures/tree/avl-tree)
   - [ ] 红黑树
 - [ ] 图（有向图和无向图）
 - [ ] 并查集
