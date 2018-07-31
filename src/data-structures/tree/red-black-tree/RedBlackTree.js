@@ -66,13 +66,14 @@ export default class RedBlackTree extends BinarySearchTree {
     const grandGrandParent = grandParentNode.parent
     let grandParentNodeIsLeft
     if (grandGrandParent) {
-      grandParentNodeIsLeft = this.nodeComparator(
+      grandParentNodeIsLeft = this.nodeComparator.equal(
         grandGrandParent.left,
         grandParentNode
       )
     }
     const parentNode = grandParentNode.left
     const parentRightNode = parentNode.right
+    parentNode.setRight(grandParentNode)
     grandParentNode.setLeft(parentRightNode)
     if (grandGrandParent) {
       if (grandParentNodeIsLeft) {
@@ -106,7 +107,7 @@ export default class RedBlackTree extends BinarySearchTree {
       )
     }
     const parentNode = grandParentNode.right
-    const parentLeftNode = parent.left
+    const parentLeftNode = parentNode.left
     parentNode.setLeft(grandParentNode)
     grandParentNode.setRight(parentLeftNode)
 

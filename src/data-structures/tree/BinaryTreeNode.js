@@ -71,7 +71,7 @@ export default class BinaryTreeNode {
     // 判断祖父节点的左节点是否是父节点
     if (this.nodeComparator.equal(this.parent, this.parent.parent.left)) {
       // 父节点的兄弟节点是右节点
-      return ths.parent.parent.right
+      return this.parent.parent.right
     }
     // 父节点的兄弟节点是左节点
     return this.parent.parent.left
