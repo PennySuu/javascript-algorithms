@@ -16,7 +16,7 @@
 - [x] [树](/src/data-structures/tree/BinaryTreeNode.js)
   - [x] [二叉查找树](/src/data-structures/tree/binary-search-tree)
   - [x] [AVL 树](/src/data-structures/tree/avl-tree)
-  - [ ] 红黑树
+  - [x] [红黑树](/src/data-structures/tree/red-black-tree)
 - [ ] 图（有向图和无向图）
 - [ ] 并查集
 
@@ -25,4 +25,5 @@
 ```bash
 npm i
 npm test
+npm test -- 'RedBlackTree'
 ```
