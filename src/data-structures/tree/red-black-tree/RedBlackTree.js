@@ -94,8 +94,6 @@ export default class RedBlackTree extends BinarySearchTree {
           this.root = newGrandParent
           this.makeNodeBlack(this.root)
         }
-        // 继续检查树的平衡性
-        this.balance(newGrandParent)
       }
     }
   }
