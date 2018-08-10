@@ -56,11 +56,61 @@ export default class Graph {
     startVertex.deleteEdge(edge)
     endVertex.deleteEdge(edge)
   }
-  findEdge(startVertex,endVertex){
+  findEdge(startVertex, endVertex) {
     const vertex = this.getVertexByKey(startVertex.getKey())
-    if(!vertex){
+    if (!vertex) {
       return null
     }
     return vertex.findEdge(endVertex)
+  }
+  getAllEdges() {
+    return Object.values(this.edges)
+  }
+  getWeight() {
+    return this.getAllEdges().reduce((weight, graphEdge) => {
+      return weight + graphEdge.weight
+    }, 0)
+  }
+  reverse() {
+    this.getAllEdges().forEach(edge => {
+      this.deleteEdge(edge)
+      edge.reverse()
+      this.addEdge(edge)
+    })
+  }
+  getNeighbors(vertex){
+    return vertex.getNeighbors()
+  }
+  getVerticesIndices() {
+    const verticesIndices = {}
+    this.getAllVertices().forEach((vertex, index) => {
+      verticesIndices[vertex.getKey()] = index
+    })
+    return verticesIndices
+  }
+  getAdjacencyMatrix() {
+    const vertices = this.getAllVertices()
+    const verticesIndices = this.getVerticesIndices()
+
+    const initalValue = this.isDirected ? Infinity : 0
+    const adjacencyMatrix = Array(vertices.length)
+      .fill(null)
+      .map(() => {
+        return Array(vertices.length).fill(initalValue)
+      })
+
+    vertices.forEach((vertex, vertexIndex) => {
+      vertex.getNeighbors().forEach(neighbor => {
+        const neighborIndex = verticesIndices[neighbor.getKey()]
+        adjacencyMatrix[vertexIndex][neighborIndex] = this.isDirected
+          ? this.findEdge(vertex, neighbor).weight
+          : 1
+      })
+    })
+
+    return adjacencyMatrix
+  }
+  toString() {
+    return Object.keys(this.vertices).toString()
   }
 }

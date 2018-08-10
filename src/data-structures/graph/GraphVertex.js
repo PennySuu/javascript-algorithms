@@ -5,17 +5,27 @@ export default class GraphVertex {
     if (value === undefined) {
       throw new Error('Graph vertex must have a value')
     }
+
+    /**
+     * @param {GraphEdge} edgeA
+     * @param {GraphEdge} edgeB
+     */
     const edgeComparator = (edgeA, edgeB) => {
-      if (edgeA.weight === edgeB.weight) {
+      if (edgeA.getKey() === edgeB.getKey()) {
         return 0
       }
-      return edgeA.weight > edgeB.weight ? 1 : -1
+
+      return edgeA.getKey() < edgeB.getKey() ? -1 : 1
     }
+
+    // Normally you would store string value like vertex name.
+    // But generally it may be any object as well
     this.value = value
     this.edges = new LinkedList(edgeComparator)
   }
   addEdge(edge) {
     this.edges.append(edge)
+    return this
   }
   deleteEdge(edge) {
     this.edges.delete(edge)
@@ -38,21 +48,22 @@ export default class GraphVertex {
   }
   deleteAllEdges() {
     this.getEdges().forEach(edge => this.deleteEdge(edge))
+    return this
   }
   getNeighbors() {
     const edges = this.edges.toArray()
     const neighborsConverter = node => {
       return node.value.startVertex === this
-        ? node.value.startVertex
-        : node.value.endVertex
+        ? node.value.endVertex
+        : node.value.startVertex
     }
     return edges.map(neighborsConverter)
   }
   hasNeighbor(vertex) {
-    const vertexNode = this.edge.find({
+    const vertexNode = this.edges.find({
       callback: edge => edge.startVertex === vertex || edge.endVertex === vertex
     })
-    return vertexNode
+    return !!vertexNode
   }
   getDegree() {
     return this.edges.toArray().length
