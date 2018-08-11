@@ -17,13 +17,15 @@
   - [x] [二叉查找树](/src/data-structures/tree/binary-search-tree)
   - [x] [AVL 树](/src/data-structures/tree/avl-tree)
   - [x] [红黑树](/src/data-structures/tree/red-black-tree)
-- [ ] 图（有向图和无向图）
+- [x] [图（有向图和无向图）](/src/data-structures/graph)
 - [ ] 并查集
 
 ## 测试
 
 ```bash
 npm i
+
 npm test
+or
 npm test -- 'RedBlackTree'
 ```
