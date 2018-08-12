@@ -8,9 +8,9 @@ export default class GraphEdge {
    * @param {number} weight
    */
   constructor(startVertex, endVertex, weight = 0) {
-    // 边的起点
+    // 边的始点
     this.startVertex = startVertex
-    // 边的中点
+    // 边的终点
     this.endVertex = endVertex
     // 边的权重
     this.weight = weight
@@ -25,7 +25,7 @@ export default class GraphEdge {
     return `${startVertex}_${endVertex}`
   }
   /**
-   * 反转边的起点与重点
+   * 反转边的始点与终点
    * @returns {GraphEdge}
    */
   reverse() {
