@@ -18,7 +18,7 @@
   - [x] [AVL 树](/src/data-structures/tree/avl-tree)
   - [x] [红黑树](/src/data-structures/tree/red-black-tree)
 - [x] [图（有向图和无向图）](/src/data-structures/graph)
-- [ ] 并查集
+- [x] [并查集](/src/data-structures/disjoint-set)
 
 ## 测试
 
